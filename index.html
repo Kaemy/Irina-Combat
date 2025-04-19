@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .pokemon-card {
+      max-width: 590px;
+      border: 1px solid #ccc;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      padding: 5px;
+    }
+    .left-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.25rem;
+      min-width: 160px;
+    }
+    .pokemon-sprite {
+      width: 96px;
+      height: 96px;
+      image-rendering: pixelated;
+    }
+    .pokemon-types {
+      display: flex;
+      gap: 1rem;
+    }
+    .type-badge {
+      font-size: 0.6rem;
+      padding: 0.2rem 0.4rem;
+      border-radius: 8px;
+      color: white;
+      font-weight: bold;
+      margin-top: -15px;
+    }
+    .basic-info {
+      text-align: center;
+      font-size: 0.85rem;
+    }
+    .info-section {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      flex: 1;
+    }
+    .infos-stats {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex: 1;
+      height: 135px;
+    }
+    .stats pre {
+      margin: 0;
+      line-height: 25px;
+      letter-spacing: 1.5px;
+    }
+    .attacks-block {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+    .attack-list {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 0.5rem;
+      font-size: 0.65rem;
+      max-height: 135px;
+      overflow-y: auto;
+    }
+    .attack-list h4 {
+      margin: 0 0 0.25rem;
+      font-size: 0.75rem;
+      color: #3f51b5;
+      text-align: center;
+    }
+    .attack {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.2rem;
+    }
+    .type-bar {
+      width: 6px;
+      height: 14px;
+      margin-right: 0.4rem;
+      border-radius: 2px;
+    }
+    .attack-name {
+      flex: 1;
+    }
+    .attack-power {
+      font-size: 0.7rem;
+      color: #666;
+      margin-left: 0.5rem;
+    }
+    /* Types */
+    .type-normal { background: #A8A878; }
+    .type-feu { background: #F08030; }
+    .type-eau { background: #6890F0; }
+    .type-plante { background: #78C850; }
+    .type-electrik { background: #F8D030; }
+    .type-glace { background: #98D8D8; }
+    .type-combat { background: #C03028; }
+    .type-poison { background: #A040A0; }
+    .type-sol { background: #E0C068; }
+    .type-vol { background: #A890F0; }
+    .type-psy { background: #F85888; }
+    .type-insecte { background: #A8B820; }
+    .type-roche { background: #B8A038; }
+    .type-spectre { background: #705898; }
+    .type-dragon { background: #7038F8; }
+    .type-tenebres { background: #705848; }
+    .type-acier { background: #B8B8D0; }
+    .type-fee { background: #EE99AC; }
+  </style>
+</head>
+<body>
+  <div class="pokemon-card">
+    <div class="left-section">
+      <img src="https://kaemy.github.io/Irina-TC/img/pokemon/sprites/Batmoloss.png" alt="Batmoloss Sprite" class="pokemon-sprite">
+      <div class="pokemon-types">
+        <span class="type-badge type-eau">Eau</span>
+        <span class="type-badge type-psy">Psy</span>
+      </div>
+      <div class="basic-info">
+        <div>Batmoloss - Ramoloss S</div>
+        <div>Niveau 50</div>
+      </div>
+    </div>
+    <div class="info-section">
+      <div class="infos-stats">
+        <div class="stats">
+<pre>PV   : 90 + 90 ➞ 180
+ATK  : 65 + 110 ➞ 175
+DEF  : 65 + 100 ➞ 165
+ATK S: 40 + 00 ➞ 40
+DEF S: 40 + 100 ➞ 140
+VIT  : 15 + 50 ➞ 65</pre>
+        </div>
+      </div>
+      <div class="attacks-block">
+        <div class="attack-list">
+          <h4>MONTÉE DE NIVEAU</h4>
+          <div class="attack"><span class="type-bar type-normal"></span><span class="attack-name">Charge</span><span class="attack-power">40</span></div>
+          <div class="attack"><span class="type-bar type-spectre"></span><span class="attack-name">Malédiction</span><span class="attack-power">–</span></div>
+          <div class="attack"><span class="type-bar type-normal"></span><span class="attack-name">Rugissement</span><span class="attack-power">–</span></div>
+          <div class="attack"><span class="type-bar type-eau"></span><span class="attack-name">Pistolet à O</span><span class="attack-power">40</span></div>
+          <div class="attack"><span class="type-bar type-normal"></span><span class="attack-name">Bâillement</span><span class="attack-power">–</span></div>
+          <div class="attack"><span class="type-bar type-psy"></span><span class="attack-name">Choc Mental</span><span class="attack-power">50</span></div>
+          <div class="attack"><span class="type-bar type-normal"></span><span class="attack-name">Entrave</span><span class="attack-power">–</span></div>
+          <div class="attack"><span class="type-bar type-eau"></span><span class="attack-name">Vibraqua</span><span class="attack-power">60</span></div>
+          <div class="attack"><span class="type-bar type-normal"></span><span class="attack-name">Coup d'Boule</span><span class="attack-power">70</span></div>
+          <div class="attack"><span class="type-bar type-psy"></span><span class="attack-name">Psykoud'Boul</span><span class="attack-power">80</span></div>
+          <div class="attack"><span class="type-bar type-psy"></span><span class="attack-name">Amnésie</span><span class="attack-power">–</span></div>
+          <div class="attack"><span class="type-bar type-normal"></span><span class="attack-name">Paresse</span><span class="attack-power">–</span></div>
+          <div class="attack"><span class="type-bar type-psy"></span><span class="attack-name">Psyko</span><span class="attack-power">90</span></div>
+          <div class="attack"><span class="type-bar type-normal"></span><span class="attack-name">Boost</span><span class="attack-power">–</span></div>
+          <div class="attack"><span class="type-bar type-eau"></span><span class="attack-name">Danse Pluie</span><span class="attack-power">–</span></div>
+          <div class="attack"><span class="type-bar type-psy"></span><span class="attack-name">Vibra Soin</span><span class="attack-power">–</span></div>
+          <h4>CAPACITÉS SPÉCIALES</h4>
+          <div class="attack"><span class="type-bar type-eau"></span><span class="attack-name">Surf</span><span class="attack-power">90</span></div>
+          <div class="attack"><span class="type-bar type-normal"></span><span class="attack-name">Force</span><span class="attack-power">80</span></div>
+          <div class="attack"><span class="type-bar type-poison"></span><span class="attack-name">Éructation</span><span class="attack-power">120</span></div>
+          <div class="attack"><span class="type-bar type-normal"></span><span class="attack-name">Cognobidon</span><span class="attack-power">–</span></div>
+          <div class="attack"><span class="type-bar type-normal"></span><span class="attack-name">Écrasement</span><span class="attack-power">65</span></div>
+          <div class="attack"><span class="type-bar type-normal"></span><span class="attack-name">Moi d'Abord</span><span class="attack-power">–</span></div>
+          <div class="attack"><span class="type-bar type-insecte"></span><span class="attack-name">Rayon Signal</span><span class="attack-power">75</span></div>
+          <div class="attack"><span class="type-bar type-psy"></span><span class="attack-name">Reflet Magik</span><span class="attack-power">–</span></div>
+          <div class="attack"><span class="type-bar type-poison"></span><span class="attack-name">Toxik</span><span class="attack-power">–</span></div>
+          <div class="attack"><span class="type-bar type-normal"></span><span class="attack-name">Clonage</span><span class="attack-power">–</span></div>
+          <div class="attack"><span class="type-bar type-psy"></span><span class="attack-name">Repos</span><span class="attack-power">–</span></div>
+          <div class="attack"><span class="type-bar type-normal"></span><span class="attack-name">Zone Étrange</span><span class="attack-power">–</span></div>
+          <div class="attack"><span class="type-bar type-normal"></span><span class="attack-name">Rune Protect</span><span class="attack-power">–</span></div>
+          <div class="attack"><span class="type-bar type-glace"></span><span class="attack-name">Vent Glacé</span><span class="attack-power">55</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
